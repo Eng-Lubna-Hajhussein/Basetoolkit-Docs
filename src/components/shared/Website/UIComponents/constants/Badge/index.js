@@ -44,7 +44,7 @@ export const badgeContent = [
   { label: "#Zero Count", href: "#zero-count" },
   { label: "#Max Value", href: "#max-value" },
   { label: "#Dot Style", href: "#dot-style" },
-  { label: "#Badge Position", href: "#badge-position" },
+  // { label: "#Badge Position", href: "#badge-position" },
   { label: "#Alignment Options", href: "#alignment-options" },
   { label: "<Badge />", href: "#badge-api" },
 ];
@@ -101,14 +101,14 @@ export const badgeSections = [
     source: DotBadgeSrc,
     view: DotBadgeView,
   },
-  {
-    id: "badge-position",
-    title: "#Badge Position",
-    subtitle:
-      "Use the overlap prop to control badge placement relative to its element.",
-    source: BadgeOverlapSrc,
-    view: BadgeOverlapView,
-  },
+  // {
+  //   id: "badge-position",
+  //   title: "#Badge Position",
+  //   subtitle:
+  //     "Use the overlap prop to control badge placement relative to its element.",
+  //   source: BadgeOverlapSrc,
+  //   view: BadgeOverlapView,
+  // },
   {
     id: "alignment-options",
     title: "#Alignment Options",

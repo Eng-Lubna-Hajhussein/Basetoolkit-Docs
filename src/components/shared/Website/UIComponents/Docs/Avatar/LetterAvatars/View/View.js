@@ -4,9 +4,10 @@ import { Avatar, Stack, colors } from "@basetoolkit/ui";
 export default function LetterAvatars() {
   return (
     <Stack direction="row" spacing={2}>
-      <Avatar>H</Avatar>
-      <Avatar bgcolor={colors.deepOrange[500]}>N</Avatar>
-      <Avatar bgcolor={colors.deepPurple[500]}>OP</Avatar>
+      <Avatar color="warning">R</Avatar>
+      <Avatar bgcolor={colors.red[500]}>L</Avatar>
+      <Avatar bgcolor={colors.pink[500]}>LH</Avatar>
+      <Avatar bgcolor={colors.green[500]}>YES</Avatar>
     </Stack>
   );
 }

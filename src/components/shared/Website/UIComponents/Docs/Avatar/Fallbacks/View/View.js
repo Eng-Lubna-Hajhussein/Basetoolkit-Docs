@@ -6,15 +6,15 @@ export default function FallbackAvatars() {
   return (
     <Stack direction="row" spacing={2}>
       <Avatar
-        bgcolor={deepOrange[500]}
-        alt="Remy Sharp"
+        bgcolor={"warning"}
+        alt="Lubna Hajhussein"
         src="/broken-image.jpg"
       >
-        B
+        L
       </Avatar>
       <Avatar
-        bgcolor={deepOrange[500]}
-        alt="Remy Sharp"
+        bgcolor={deepOrange[600]}
+        alt="Omar Ali"
         src="/broken-image.jpg"
       />
       <Avatar src="/broken-image.jpg" />
