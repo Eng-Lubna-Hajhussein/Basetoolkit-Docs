@@ -89,6 +89,9 @@ import RouteClassnamesUsage from "./components/shared/Website/Toolkits/Docs/clas
 import RouteIdbuilderUsage from "./components/shared/Website/Toolkits/Docs/idbuilder/Usage/RouteUsage";
 import RouteMediaqueryUsage from "./components/shared/Website/Toolkits/Docs/mediaquery/Usage/RouteUsage";
 import RouteScrollTriggerUsage from "./components/shared/Website/Toolkits/Docs/scrollTrigger/Usage/RouteUsage";
+import RouteMultiStepForm from "./components/shared/Website/Templates/Docs/multiStepForm/RouteMultiStepForm";
+import RouteAdminDashboard from "./components/shared/Website/Templates/Docs/adminDahboard/RouteAdminDashboard";
+import Route1inchClone from "./components/shared/Website/Templates/Docs/1inchClone/Route1inchClone";
 
 function Router() {
   return (
@@ -275,6 +278,18 @@ function Router() {
         <Route
           path={appRouting.UseScrollTrigger_Usage.url}
           element={<RouteScrollTriggerUsage />}
+        />
+        <Route
+          path={appRouting.Templates_Multi_Step_Form.url}
+          element={<RouteMultiStepForm />}
+        />
+        <Route
+          path={appRouting.Templates_Admin_Dashboard.url}
+          element={<RouteAdminDashboard />}
+        />
+        <Route
+          path={appRouting.Templates_1inch_Clone.url}
+          element={<Route1inchClone />}
         />
       </Routes>
     </BrowserRouter>

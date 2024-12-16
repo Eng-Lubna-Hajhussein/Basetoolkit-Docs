@@ -90,6 +90,9 @@ const appRouting = {
   Idbuilder_Usage: { url: appPages.Idbuilder_Usage },
   MediaQuery_Usage: { url: appPages.MediaQuery_Usage },
   UseScrollTrigger_Usage: { url: appPages.UseScrollTrigger_Usage },
+  Templates_Multi_Step_Form: { url: appPages.Templates_Multi_Step_Form },
+  Templates_Admin_Dashboard: { url: appPages.Templates_Admin_Dashboard },
+  Templates_1inch_Clone: { url: appPages.Templates_1inch_Clone },
 };
 
 export default appRouting;

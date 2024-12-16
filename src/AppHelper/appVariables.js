@@ -25,6 +25,7 @@ export const initialAppState = {
         64384583: false,
         15197025: false,
         90638787: false,
+        58276096:false
         // 89683188:false,
         // 37319127:false
       },
@@ -720,6 +721,33 @@ export const categoriesEnum = {
       ],
     },
   },
+  templates:{
+    freeTemplates: {
+      root: 0,
+      value: 58276096,
+      label: "Free Templates",
+      sections: [
+        {
+          root: 58276096,
+          label: "Multi-Step form",
+          value: 22987509,
+          path: "/basetoolkit-templates-multi-step-form",
+        },
+        {
+          root: 58276096,
+          label: "admin dashboard",
+          value: 66240292,
+          path: "/basetoolkit-templates-admin-dashboard",
+        },
+        {
+          root: 58276096,
+          label: "1inch clone",
+          value: 24093284,
+          path: "/basetoolkit-templates-1inch-clone",
+        },
+      ],
+    },
+  }
   // system: {
   //   theming: {
   //     root: 0,

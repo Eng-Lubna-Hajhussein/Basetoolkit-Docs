@@ -2,6 +2,7 @@ import { Box, GlobalStyles } from "@basetoolkit/ui";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 // TODO --> MAKING A LANDING PAGE IN (2025)
 function Website() {
   const navigate = useNavigate();

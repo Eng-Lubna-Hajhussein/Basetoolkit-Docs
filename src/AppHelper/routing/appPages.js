@@ -3,7 +3,8 @@ export const Autocomplete_Component = "/basetoolkit-autocomplete-component";
 export const Button_Component = "/basetoolkit-button-component";
 export const ButtonGroup_Component = "/basetoolkit-button-group-component";
 export const Checkbox_Component = "/basetoolkit-checkbox-component";
-export const FloatingActionButton_Component = "/basetoolkit-floating-action-button-component";
+export const FloatingActionButton_Component =
+  "/basetoolkit-floating-action-button-component";
 export const RadioGroup_Component = "/basetoolkit-radio-group-component";
 export const Rating_Component = "/basetoolkit-rating-component";
 export const Select_Component = "/basetoolkit-select-component";
@@ -31,7 +32,8 @@ export const Accordion_Component = "/basetoolkit-accordion-component";
 export const AppBar_Component = "/basetoolkit-app-bar-component";
 export const Card_Component = "/basetoolkit-card-component";
 export const Paper_Component = "/basetoolkit-paper-component";
-export const BottomNavigation_Component = "/basetoolkit-bottom-navigation-component";
+export const BottomNavigation_Component =
+  "/basetoolkit-bottom-navigation-component";
 export const Breadcrumbs_Component = "/basetoolkit-breadcrumbs-component";
 export const Drawer_Component = "/basetoolkit-drawer-component";
 export const Link_Component = "/basetoolkit-link-component";
@@ -47,7 +49,8 @@ export const FormApi_Register_Fields = "/basetoolkit-formapi-register-fields";
 export const FormApi_Apply_Validation = "/basetoolkit-formapi-apply-validation";
 export const FormApi_Form_Integration = "/basetoolkit-formapi-form-integration";
 export const FormApi_UI_Libraries = "/basetoolkit-formapi-ui-libraries";
-export const FormApi_Controlled_Inputs = "/basetoolkit-formapi-controlled-inputs";
+export const FormApi_Controlled_Inputs =
+  "/basetoolkit-formapi-controlled-inputs";
 export const FormApi_Global_States = "/basetoolkit-formapi-global-states";
 export const FormApi_Handle_Errors = "/basetoolkit-formapi-handle-errors";
 export const Coloris_Main = "/basetoolkit-coloris-main";
@@ -65,7 +68,8 @@ export const BarChart_Component = "/basetoolkit-bar-chart-component";
 export const LineChart_Component = "/basetoolkit-line-chart-component";
 export const PieChart_Component = "/basetoolkit-pie-chart-component";
 export const Gauge_Component = "/basetoolkit-gauge-component";
-export const SparklineChart_Component = "/basetoolkit-sparkline-chart-component";
+export const SparklineChart_Component =
+  "/basetoolkit-sparkline-chart-component";
 export const TextField_Component = "/basetoolkit-text-field-component";
 export const DatePicker_Component = "/basetoolkit-date-picker-component";
 export const DateCalendar_Component = "/basetoolkit-date-calendar-component";
@@ -76,8 +80,10 @@ export const TimeField_Component = "/basetoolkit-time-field-component";
 export const ProSelect_Component = "/basetoolkit-pro-select-component";
 export const Modal_Component = "/basetoolkit-modal-component";
 export const Popper_Component = "/basetoolkit-popper-component";
-export const ClickAwayListener_Component = "/basetoolkit-click-away-listener-component";
-export const TextareaAutosize_Component = "/basetoolkit-textarea-autosize-component";
+export const ClickAwayListener_Component =
+  "/basetoolkit-click-away-listener-component";
+export const TextareaAutosize_Component =
+  "/basetoolkit-textarea-autosize-component";
 export const Transitions_Component = "/basetoolkit-transitions-component";
 export const Stepper_Component = "/basetoolkit-stepper-component";
 export const Carousel_Component = "/basetoolkit-carousel-component";
@@ -87,3 +93,8 @@ export const Classnames_Usage = "/basetoolkit-classnames-usage";
 export const Idbuilder_Usage = "/basetoolkit-idbuilder-usage";
 export const MediaQuery_Usage = "/basetoolkit-MediaQuery-usage";
 export const UseScrollTrigger_Usage = "/basetoolkit-useScrollTrigger-usage";
+export const Templates_Multi_Step_Form =
+  "/basetoolkit-templates-multi-step-form";
+export const Templates_Admin_Dashboard =
+  "/basetoolkit-templates-admin-dashboard";
+export const Templates_1inch_Clone = "/basetoolkit-templates-1inch-clone";
