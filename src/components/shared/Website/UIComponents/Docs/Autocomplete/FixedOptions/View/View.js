@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import { Autocomplete, TextField, Chip } from '@basetoolkit/ui';
+import React, { useState } from "react";
+import { Autocomplete, TextField, Chip } from "@basetoolkit/ui";
 
-const colorOptions = ['Red', 'Green', 'Blue', 'Yellow'];
-const fixedColors = ['Green'];
+const colorOptions = ["Red", "Green", "Blue", "Yellow"];
+const fixedColors = ["Green"];
 
 export default function FixedOptions() {
-  const [value, setValue] = useState([...fixedColors,colorOptions[0],colorOptions[2]]);
+  const [value, setValue] = useState([
+    ...fixedColors,
+    colorOptions[0],
+    colorOptions[2],
+  ]);
 
   return (
     <Autocomplete
@@ -13,13 +17,16 @@ export default function FixedOptions() {
       options={colorOptions}
       value={value}
       onChange={(newValue) => {
-        setValue([...fixedColors, ...newValue.filter((color) => !fixedColors.includes(color))]);
+        setValue([
+          ...fixedColors,
+          ...newValue.filter((color) => !fixedColors.includes(color)),
+        ]);
       }}
       renderTags={(tagValue, getTagProps) =>
         tagValue.map((option, index) => (
           <Chip
             label={option}
-            sx={{mr:1}}
+            sx={{ mr: 1 }}
             {...getTagProps({ index })}
             onDelete={() => {
               setValue(value.filter((opt) => opt !== option));

@@ -1,13 +1,20 @@
 export const source = `
-import * as React from 'react';
-import { Accordion,AccordionSummary,AccordionDetails,Typography,SvgIcon, Box } from '@basetoolkit/ui';
+import * as React from "react";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  SvgIcon,
+  Box,
+} from "@basetoolkit/ui";
 
 export default function AccordionExpandDefault() {
   return (
     <Box>
       <Accordion defaultExpanded>
         <AccordionSummary
-          expandIcon={<SvgIcon icon="expand_more"  />}
+          expandIcon={<SvgIcon icon="expand_more" />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
@@ -22,7 +29,7 @@ export default function AccordionExpandDefault() {
       </Accordion>
       <Accordion>
         <AccordionSummary
-          expandIcon={<SvgIcon icon="expand_more"  />}
+          expandIcon={<SvgIcon icon="expand_more" />}
           aria-controls="panel2-content"
           id="panel2-header"
         >

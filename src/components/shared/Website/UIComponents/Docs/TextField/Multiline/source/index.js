@@ -13,12 +13,6 @@ export default function MultilineTextFields() {
           maxRows={4}
         />
         <TextField
-          id="outlined-textarea"
-          label="Multiline Placeholder"
-          placeholder="Placeholder"
-          multiline
-        />
-        <TextField
           id="outlined-multiline-static"
           label="Multiline"
           multiline
@@ -30,13 +24,6 @@ export default function MultilineTextFields() {
           label="Multiline"
           multiline
           maxRows={4}
-          variant="filled"
-        />
-        <TextField
-          id="filled-textarea"
-          label="Multiline Placeholder"
-          placeholder="Placeholder"
-          multiline
           variant="filled"
         />
         <TextField
@@ -55,13 +42,6 @@ export default function MultilineTextFields() {
           variant="standard"
         />
         <TextField
-          id="standard-textarea"
-          label="Multiline Placeholder"
-          placeholder="Placeholder"
-          multiline
-          variant="standard"
-        />
-        <TextField
           id="standard-multiline-static"
           label="Multiline"
           multiline
@@ -73,4 +53,4 @@ export default function MultilineTextFields() {
     </Box>
   );
 }
-`
+`;

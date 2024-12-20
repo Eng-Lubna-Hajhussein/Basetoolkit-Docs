@@ -1,9 +1,9 @@
 export const source = `
-import { ProSelect } from "@basetoolkit/ui";
 import React, { useState } from "react";
+import { ProSelect } from "@basetoolkit/ui";
 
 export default function MultiSelect() {
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState(["Football", "Basketball"]);
   const options = ["Football", "Basketball", "Tennis", "Cricket"];
 
   return (

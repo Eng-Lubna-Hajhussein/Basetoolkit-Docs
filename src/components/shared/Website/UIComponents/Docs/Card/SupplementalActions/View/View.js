@@ -11,8 +11,8 @@ import {
 
 export default function MultiActionAreaCard() {
   return (
-    <Card sx={{ maxWidth: 345,pb:1}}>
-      <CardActionArea style={{height:"auto"}}>
+    <Card sx={{ maxWidth: 345, pb: 1 }}>
+      <CardActionArea style={{ height: "auto" }}>
         <CardMedia
           component="img"
           height="140"

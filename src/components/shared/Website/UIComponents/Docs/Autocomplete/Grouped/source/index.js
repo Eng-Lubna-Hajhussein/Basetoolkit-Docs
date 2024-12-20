@@ -1,103 +1,83 @@
 export const source = `
-import * as React from "react";
-import { TextField, Autocomplete } from "@basetoolkit/ui";
+import React from "react";
+import { Stack, Autocomplete, TextField, Box, Checkbox } from "@basetoolkit/ui";
 
-function sleep(duration) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, duration);
-  });
-}
-
-function AsynchronousRequestsDemo() {
-  const [open, setOpen] = React.useState(false);
-  const [options, setOptions] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-    (async () => {
-      setLoading(true);
-      await sleep(1e3); 
-      setLoading(false);
-
-      setOptions([...topFilms]);
-    })();
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    setOptions([]);
-  };
-
-  return (
-    <Autocomplete
-      sx={{ width: 300 }}
-      variant="outlined"
-      open={open}
-      onOpen={handleOpen}
-      onClose={handleClose}
-      openOnFocus
-      isOptionEqualToValue={(option, value) => option.title === value.title}
-      getOptionLabel={(option) => option.title}
-      options={options}
-      loading={loading}
-      renderInput={(params) => <TextField {...params} label="Asynchronous" />}
-    />
-  );
-}
-
-// Top films as rated by IMDb users. http://www.imdb.com/chart/top
-const topFilms = [
-  { title: "The Shawshank Redemption", year: 1994 },
-  { title: "The Godfather", year: 1972 },
-  { title: "The Godfather: Part II", year: 1974 },
-  { title: "The Dark Knight", year: 2008 },
-  { title: "12 Angry Men", year: 1957 },
-  { title: "Schindler's List", year: 1993 },
-  { title: "Pulp Fiction", year: 1994 },
-  {
-    title: "The Lord of the Rings: The Return of the King",
-    year: 2003,
-  },
-  { title: "The Good, the Bad and the Ugly", year: 1966 },
-  { title: "Fight Club", year: 1999 },
-  {
-    title: "The Lord of the Rings: The Fellowship of the Ring",
-    year: 2001,
-  },
-  {
-    title: "Star Wars: Episode V - The Empire Strikes Back",
-    year: 1980,
-  },
-  { title: "Forrest Gump", year: 1994 },
-  { title: "Inception", year: 2010 },
-  {
-    title: "The Lord of the Rings: The Two Towers",
-    year: 2002,
-  },
-  { title: "One Flew Over the Cuckoo's Nest", year: 1975 },
-  { title: "Goodfellas", year: 1990 },
-  { title: "The Matrix", year: 1999 },
-  { title: "Seven Samurai", year: 1954 },
-  {
-    title: "Star Wars: Episode IV - A New Hope",
-    year: 1977,
-  },
-  { title: "City of God", year: 2002 },
-  { title: "Se7en", year: 1995 },
-  { title: "The Silence of the Lambs", year: 1991 },
-  { title: "It's a Wonderful Life", year: 1946 },
-  { title: "Life Is Beautiful", year: 1997 },
-  { title: "The Usual Suspects", year: 1995 },
-  { title: "Léon: The Professional", year: 1994 },
-  { title: "Spirited Away", year: 2001 },
-  { title: "Saving Private Ryan", year: 1998 },
-  { title: "Once Upon a Time in the West", year: 1968 },
-  { title: "American History X", year: 1998 },
-  { title: "Interstellar", year: 2014 },
+const countryOptions = [
+  { name: "Canada", code: "CA", continent: "North America" },
+  { name: "United States", code: "US", continent: "North America" },
+  { name: "Mexico", code: "MX", continent: "North America" },
+  { name: "Brazil", code: "BR", continent: "South America" },
+  { name: "Argentina", code: "AR", continent: "South America" },
+  { name: "Germany", code: "DE", continent: "Europe" },
+  { name: "France", code: "FR", continent: "Europe" },
+  { name: "Japan", code: "JP", continent: "Asia" },
+  { name: "China", code: "CN", continent: "Asia" },
+  { name: "Australia", code: "AU", continent: "Oceania" },
+  { name: "New Zealand", code: "NZ", continent: "Oceania" },
 ];
 
-export default AsynchronousRequestsDemo;
+const groupedOptions = countryOptions.reduce((acc, country) => {
+  const continent = country.continent;
+  acc[continent] = acc[continent] ? [...acc[continent], country] : [country];
+  return acc;
+}, {});
+
+const flattenedOptions = Object.entries(groupedOptions).flatMap(
+  ([continent, countries]) => [{ isCategory: true, continent }, ...countries]
+);
+
+export default function CountryByContinent() {
+  return (
+    <Stack spacing={2} sx={{ width: 320 }}>
+      <Autocomplete
+        options={flattenedOptions}
+        multiple
+        disableCloseOnSelect
+        defaultValue={[flattenedOptions[3], flattenedOptions[1]]}
+        getOptionLabel={(option) =>
+          option.isCategory
+            ? option.continent
+            : \`\${option.name} (\${option.code})\`
+        }
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            label="Country by Continent"
+            placeholder="Select a country"
+          />
+        )}
+        renderOption={(props, option, { onSelect, selected }) => {
+          const { key, ...optionProps } = props;
+          return option.isCategory ? (
+            <Box key={key} typography="button">
+              {option.continent}
+            </Box>
+          ) : (
+            <Box
+              display="flex"
+              gap={1}
+              alignItems="center"
+              key={key}
+              {...optionProps}
+            >
+              <Checkbox size="small" onChange={onSelect} checked={selected} />
+              <img
+                src={\`https://flagcdn.com/w20/\${option.code.toLowerCase()}.png\`}
+                alt=""
+                style={{
+                  width: 20,
+                  height: 15,
+                  borderRadius: "2px",
+                }}
+              />
+              <span style={{ fontSize: "0.95rem", color: "#333" }}>
+                {option.name} ({option.code})
+              </span>
+            </Box>
+          );
+        }}
+      />
+    </Stack>
+  );
+}
 `;

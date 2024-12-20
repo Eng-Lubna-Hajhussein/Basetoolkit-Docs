@@ -1,5 +1,11 @@
-import React from 'react';
-import { Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from '@basetoolkit/ui';
+import React from "react";
+import {
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+  FormLabel,
+} from "@basetoolkit/ui";
 
 const LabelPositioning = () => {
   return (
@@ -11,7 +17,12 @@ const LabelPositioning = () => {
         name="label-position-group"
         defaultValue="top"
       >
-        <FormControlLabel value="bottom" control={<Radio />} label="Bottom" labelPlacement="bottom" />
+        <FormControlLabel
+          value="bottom"
+          control={<Radio />}
+          label="Bottom"
+          labelPlacement="bottom"
+        />
         <FormControlLabel value="end" control={<Radio />} label="End" />
       </RadioGroup>
     </FormControl>

@@ -3,14 +3,14 @@ import * as React from "react";
 import { cssInjection as styled, Tabs, Box, Tab } from "@basetoolkit/ui";
 import { tabClasses, tabsClasses } from "@basetoolkit/ui/classes";
 
-const AntTabs = styled((props) => <Tabs color="#1890ff" indicatorColor="#1890ff" {...props} />)(
-  {
-    borderBottom: "1px solid #e8e8e8",
-  }
-);
+const AntTabs = styled((props) => (
+  <Tabs color="#1890ff" indicatorColor="#1890ff" {...props} />
+))({
+  borderBottom: "1px solid #e8e8e8",
+});
 
 const AntTab = styled((props) => <Tab disableRipple {...props} />)(
-  ({ theme,selected }) => ({
+  ({ theme, selected }) => ({
     textTransform: "none",
     minWidth: 0,
     [theme.breakpoints.up("sm")]: {
@@ -35,10 +35,12 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(
       color: "#40a9ff",
       opacity: 1,
     },
-    ...(selected?{
-      color: "#1890ff",
-      fontWeight: theme.typography.fontWeightMedium,
-    }:{}),
+    ...(selected
+      ? {
+          color: "#1890ff",
+          fontWeight: theme.typography.fontWeightMedium,
+        }
+      : {}),
     "&:focus": {
       backgroundColor: "#d1eaff",
     },
@@ -46,33 +48,29 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 const StyledTabs = styled((props) => (
-  <Tabs
-    {...props}
-    indicatorColor="rgba(0, 0, 0, 0)"
-  />
+  <Tabs {...props} indicatorColor="rgba(0, 0, 0, 0)" />
 ))({
-    // [\`& .\${tabsClasses.tabs}\`]:{
-       [\`& .\${tabClasses.selected}\`]:{
-        "&::after": {
-            content: '""',
-            position: "absolute",
-            bottom: 0,
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "50%", 
-            height: "2px", 
-            backgroundColor: "#635ee7", 
-          },
-       } 
+  [\`& .\${tabClasses.selected}\`]: {
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      bottom: 0,
+      left: "50%",
+      transform: "translateX(-50%)",
+      width: "50%",
+      height: "2px",
+      backgroundColor: "#635ee7",
+    },
+  },
 });
 
 const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
-  ({ theme,selected }) => ({
+  ({ theme, selected }) => ({
     textTransform: "none",
     fontWeight: theme.typography.fontWeightRegular,
     fontSize: theme.typography.pxToRem(15),
     marginRight: theme.spacing(1),
-    color:selected?"#fff !important": "rgba(255, 255, 255, 0.7) !important", 
+    color: selected ? "#fff !important" : "rgba(255, 255, 255, 0.7) !important",
     "&:focus": {
       backgroundColor: "rgba(100, 95, 228, 0.32)",
     },

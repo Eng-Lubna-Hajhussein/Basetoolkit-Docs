@@ -1,17 +1,30 @@
 export const source = `
-import * as React from 'react';
-import { Checkbox } from '@basetoolkit/ui';
+import React from "react";
+import { Checkbox, SvgIcon } from "@basetoolkit/ui";
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
-export default function BasicCheckboxesDemo() {
+const IconToggle = () => {
   return (
     <div>
-      <Checkbox {...label} defaultChecked />
-      <Checkbox {...label} />
-      <Checkbox {...label} disabled />
-      <Checkbox {...label} disabled checked />
+      <Checkbox
+        icon={<SvgIcon icon="star_border" />}
+        checkedIcon={<SvgIcon icon="star" />}
+      />
+      <Checkbox
+        icon={<SvgIcon icon="favorite_border" />}
+        checkedIcon={<SvgIcon icon="favorite" />}
+        defaultChecked
+      />
+      <Checkbox
+        icon={<SvgIcon icon="bookmark_border" />}
+        checkedIcon={<SvgIcon icon="bookmark" />}
+      />
+      <Checkbox
+        icon={<SvgIcon icon="home" />}
+        checkedIcon={<SvgIcon icon="home" variant="filled" />}
+      />
     </div>
   );
-}
-`
+};
+
+export default IconToggle;
+`;

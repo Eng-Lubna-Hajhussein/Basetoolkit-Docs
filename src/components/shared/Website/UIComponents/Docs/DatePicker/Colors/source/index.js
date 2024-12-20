@@ -1,6 +1,6 @@
 export const source = `
 import * as React from "react";
-import { Box, DatePicker, Stack } from "@basetoolkit/ui";
+import { DatePicker, Stack } from "@basetoolkit/ui";
 
 export default function FormPropsDatePickers() {
   return (

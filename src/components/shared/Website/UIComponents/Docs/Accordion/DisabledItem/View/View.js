@@ -1,13 +1,18 @@
-import * as React from 'react';
-import { Accordion,AccordionSummary,AccordionDetails,Typography,SvgIcon } from '@basetoolkit/ui';
-
+import * as React from "react";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  SvgIcon,
+} from "@basetoolkit/ui";
 
 export default function DisabledAccordion() {
   return (
-    <div style={{width:"100%"}}>
+    <div style={{ width: "100%" }}>
       <Accordion>
         <AccordionSummary
-          expandIcon={<SvgIcon icon='expand_more' />}
+          expandIcon={<SvgIcon icon="expand_more" />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
@@ -22,7 +27,7 @@ export default function DisabledAccordion() {
       </Accordion>
       <Accordion>
         <AccordionSummary
-          expandIcon={<SvgIcon icon='expand_more' />}
+          expandIcon={<SvgIcon icon="expand_more" />}
           aria-controls="panel2-content"
           id="panel2-header"
         >
@@ -37,7 +42,7 @@ export default function DisabledAccordion() {
       </Accordion>
       <Accordion disabled>
         <AccordionSummary
-          expandIcon={<SvgIcon icon='expand_more' />}
+          expandIcon={<SvgIcon icon="expand_more" />}
           aria-controls="panel3-content"
           id="panel3-header"
         >

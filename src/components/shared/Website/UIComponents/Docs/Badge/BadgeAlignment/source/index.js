@@ -55,25 +55,25 @@ export default function BadgeMax() {
       </Stack>
       <Stack spacing={4} direction="row" sx={{ color: "action.active" }}>
         <Badge color="secondary" variant="dot" anchorOrigin={anchorOrigin}>
-          <SvgIcon icon="mail" variant="filled" />
+          <SvgIcon icon="dashboard" variant="filled" />
         </Badge>
         <Badge color="secondary" badgeContent={1} anchorOrigin={anchorOrigin}>
-          <SvgIcon icon="mail" variant="filled" />
+          <SvgIcon icon="dashboard" variant="filled" />
         </Badge>
-        <Badge color="secondary" badgeContent={12} anchorOrigin={anchorOrigin}>
-          <SvgIcon icon="mail" variant="filled" />
+        <Badge color="secondary" badgeContent={13} anchorOrigin={anchorOrigin}>
+          <SvgIcon icon="dashboard" variant="filled" />
         </Badge>
         <Badge color="secondary" badgeContent={99} anchorOrigin={anchorOrigin}>
-          <SvgIcon icon="mail" variant="filled" />
+          <SvgIcon icon="dashboard" variant="filled" />
         </Badge>
         <Badge color="secondary" badgeContent={100} anchorOrigin={anchorOrigin}>
-          <SvgIcon icon="mail" variant="filled" />
+          <SvgIcon icon="dashboard" variant="filled" />
         </Badge>
         <Badge color="secondary" badgeContent={1000} max={999} anchorOrigin={anchorOrigin}>
-          <SvgIcon icon="mail" variant="filled" />
+          <SvgIcon icon="dashboard" variant="filled" />
         </Badge>
       </Stack>
     </Stack>
   );
 }
-`
+`;

@@ -1,5 +1,5 @@
-import { Box, TextField } from '@basetoolkit/ui';
 import * as React from 'react';
+import { Box, TextField } from '@basetoolkit/ui';
 
 export default function ColorTextFields() {
   return (

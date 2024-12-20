@@ -1,6 +1,12 @@
 export const source = `
 import * as React from "react";
-import { MenuItem, FormHelperText, FormControl, Select, Stack } from "@basetoolkit/ui";
+import {
+  MenuItem,
+  FormHelperText,
+  FormControl,
+  Select,
+  Stack,
+} from "@basetoolkit/ui";
 
 export default function SelectOtherProps() {
   const [age, setAge] = React.useState({ value: "", label: <em>None</em> });
@@ -56,7 +62,6 @@ export default function SelectOtherProps() {
           autoWidth
           label="Age"
           onChange={handleChange}
-          
         >
           <MenuItem value="">
             <em>None</em>
@@ -88,4 +93,4 @@ export default function SelectOtherProps() {
     </Stack>
   );
 }
-`
+`;

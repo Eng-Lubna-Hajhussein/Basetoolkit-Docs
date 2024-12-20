@@ -15,6 +15,7 @@ export default function DiscreteSliderSteps() {
         getAriaValueText={valuetext}
         step={0.00000001}
         marks
+        tooltip
         min={-0.00000005}
         max={0.0000001}
         valueLabelDisplay="auto"
@@ -22,4 +23,4 @@ export default function DiscreteSliderSteps() {
     </Box>
   );
 }
-`
+`;

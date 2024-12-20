@@ -4,7 +4,6 @@ import {
   Box,
   BottomNavigation,
   BottomNavigationAction,
-  SvgIcon,
 } from "@basetoolkit/ui";
 
 export default function SimpleBottomNavigation() {
@@ -19,18 +18,9 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction
-          label="Recents"
-          icon={"restore"}
-        />
-        <BottomNavigationAction
-          label="Favorites"
-          icon={"favorite"}
-        />
-        <BottomNavigationAction
-          label="Nearby"
-          icon={"location_on"}
-        />
+        <BottomNavigationAction label="Recents" icon={"restore"} />
+        <BottomNavigationAction label="Favorites" icon={"favorite"} />
+        <BottomNavigationAction label="Nearby" icon={"location_on"} />
       </BottomNavigation>
     </Box>
   );

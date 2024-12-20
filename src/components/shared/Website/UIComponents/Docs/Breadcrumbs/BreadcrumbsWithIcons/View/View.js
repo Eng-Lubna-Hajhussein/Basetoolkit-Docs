@@ -30,7 +30,7 @@ export default function IconBreadcrumbs() {
         </Link>
         <Typography
           color="text.primary"
-          style={{display: "flex", alignItems: "center" }}
+          style={{ display: "flex", alignItems: "center" }}
         >
           <SvgIcon icon="grain" sx={{ mr: 0.5 }} size="small" />
           Breadcrumb

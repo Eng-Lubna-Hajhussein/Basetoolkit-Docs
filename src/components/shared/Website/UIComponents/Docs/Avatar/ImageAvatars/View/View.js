@@ -16,7 +16,7 @@ export default function ImageAvatars() {
         alt="Noor Ali"
         src="https://tse4.mm.bing.net/th?id=OIP.0p9Uc6Q1ZN1cyUfReUTOFAHaHa&pid=Api&P=0&h=220"
       />
-        <Avatar
+      <Avatar
         alt="Jihad Taha"
         src="https://tse1.mm.bing.net/th?id=OIP.DNyjY7Q8lQdzc_vOtR1ONAHaEK&pid=Api&P=0&h=220"
       />

@@ -92,7 +92,6 @@ export const buttonContent = [
   { label: "<LoadingButton />", href: "#loading-button-api" },
 ];
 
-
 export const buttonSections = [
   {
     id: "basic-buttons",

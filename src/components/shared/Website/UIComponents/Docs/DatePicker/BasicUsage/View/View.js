@@ -1,5 +1,5 @@
-import { Box, DatePicker } from "@basetoolkit/ui";
 import * as React from "react";
+import { Box, DatePicker } from "@basetoolkit/ui";
 
 export default function BasicDatePicker() {
   return (

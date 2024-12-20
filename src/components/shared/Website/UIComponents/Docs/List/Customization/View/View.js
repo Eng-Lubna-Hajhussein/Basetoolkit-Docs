@@ -20,7 +20,6 @@ import {
   listItemButtonClasses,
   listItemClasses,
   listItemIconClasses,
-  tooltipClasses,
 } from "@basetoolkit/ui/classes";
 
 const data = [

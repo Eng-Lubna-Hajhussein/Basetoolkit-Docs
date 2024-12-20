@@ -9,8 +9,8 @@ import {
 import { containerProps } from "../../Api/PropsApi/constants";
 
 export const containerContent = [
-  { label: "#Basic Box", href: "#basic-box" },
-  { label: "#Styled Box", href: "#styled-box" },
+  { label: "#Fluid", href: "#fluid" },
+  { label: "#Fixed", href: "#fixed" },
   { label: "<Container />", href: "#container-api" },
 ];
 

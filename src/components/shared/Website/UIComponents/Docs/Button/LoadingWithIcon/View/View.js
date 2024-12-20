@@ -32,7 +32,9 @@ function LoadingWithIcon() {
         <LoadingButton
           variant="contained"
           loading={loading}
-          startIcon={<SvgIcon icon="upload" variant="filled" color="common.white" />}
+          startIcon={
+            <SvgIcon icon="upload" variant="filled" color="common.white" />
+          }
           onClick={handleLoad}
         >
           Upload

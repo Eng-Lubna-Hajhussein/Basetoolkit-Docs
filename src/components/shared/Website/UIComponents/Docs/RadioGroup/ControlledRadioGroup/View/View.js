@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
-import { Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from '@basetoolkit/ui';
+import React, { useState } from "react";
+import {
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+  FormLabel,
+} from "@basetoolkit/ui";
 
 const ControlledRadioGroup = () => {
-  const [value, setValue] = useState('female');
+  const [value, setValue] = useState("female");
 
   const handleChange = (event) => {
     setValue(event.target.value);

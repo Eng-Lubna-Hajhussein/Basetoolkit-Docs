@@ -11,7 +11,7 @@ export const clickAwayListenerContent = [
 
 export const clickAwayListenerSections = [
   {
-    id: "uage",
+    id: "usage",
     title: "#Usage",
     subtitle: null,
     source: UsageSrc,

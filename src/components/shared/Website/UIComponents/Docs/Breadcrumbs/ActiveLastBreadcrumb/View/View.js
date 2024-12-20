@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Breadcrumbs,Link } from '@basetoolkit/ui';
+import * as React from "react";
+import { Breadcrumbs, Link } from "@basetoolkit/ui";
 
 function handleClick(event) {
   event.preventDefault();
-  console.info('You clicked a breadcrumb.');
+  console.info("You clicked a breadcrumb.");
 }
 
 export default function ActiveLastBreadcrumb() {
@@ -13,11 +13,7 @@ export default function ActiveLastBreadcrumb() {
         <Link underline="hover" color="inherit" href="#base">
           Base
         </Link>
-        <Link
-          underline="hover"
-          color="inherit"
-          href="#core"
-        >
+        <Link underline="hover" color="inherit" href="#core">
           Core
         </Link>
         <Link

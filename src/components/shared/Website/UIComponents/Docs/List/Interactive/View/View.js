@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import {
   Typography,
   Grid,
@@ -43,7 +42,7 @@ export default function InteractiveList() {
         flexGrow: 1,
         maxWidth: 752,
         bgcolor: coloris(theme.palette.divider).alpha(0.2).hex(),
-        p:2
+        p: 2,
       }}
     >
       <FormGroup row>
@@ -78,8 +77,10 @@ export default function InteractiveList() {
                   <ListItemText
                     primary="Single-line item"
                     secondary={secondary ? "Secondary text" : null}
-                    secondaryTypographyProps={{color:"default",variant:"subtitle2"}}
-
+                    secondaryTypographyProps={{
+                      color: "default",
+                      variant: "subtitle2",
+                    }}
                   />
                 </ListItem>
               )}
@@ -91,7 +92,7 @@ export default function InteractiveList() {
             Icon with text
           </Typography>
           <Demo>
-            <List dense={dense}  bgcolor="background.paper.light">
+            <List dense={dense} bgcolor="background.paper.light">
               {generate(
                 <ListItem>
                   <ListItemIcon>
@@ -100,8 +101,10 @@ export default function InteractiveList() {
                   <ListItemText
                     primary="Single-line item"
                     secondary={secondary ? "Secondary text" : null}
-                    secondaryTypographyProps={{color:"default",variant:"subtitle2"}}
-
+                    secondaryTypographyProps={{
+                      color: "default",
+                      variant: "subtitle2",
+                    }}
                   />
                 </ListItem>
               )}
@@ -115,7 +118,7 @@ export default function InteractiveList() {
             Avatar with text
           </Typography>
           <Demo>
-            <List dense={dense}  bgcolor="background.paper.light">
+            <List dense={dense} bgcolor="background.paper.light">
               {generate(
                 <ListItem>
                   <ListItemAvatar>
@@ -126,8 +129,10 @@ export default function InteractiveList() {
                   <ListItemText
                     primary="Single-line item"
                     secondary={secondary ? "Secondary text" : null}
-                    secondaryTypographyProps={{color:"default",variant:"subtitle2"}}
-
+                    secondaryTypographyProps={{
+                      color: "default",
+                      variant: "subtitle2",
+                    }}
                   />
                 </ListItem>
               )}
@@ -139,7 +144,7 @@ export default function InteractiveList() {
             Avatar with text and icon
           </Typography>
           <Demo>
-            <List dense={dense}  bgcolor="background.paper.light" >
+            <List dense={dense} bgcolor="background.paper.light">
               {generate(
                 <ListItem
                   secondaryAction={
@@ -156,7 +161,10 @@ export default function InteractiveList() {
                   <ListItemText
                     primary="Single-line item"
                     secondary={secondary ? "Secondary text" : null}
-                    secondaryTypographyProps={{color:"default",variant:"subtitle2"}}
+                    secondaryTypographyProps={{
+                      color: "default",
+                      variant: "subtitle2",
+                    }}
                   />
                 </ListItem>
               )}

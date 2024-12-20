@@ -34,27 +34,29 @@ export default function InputSlider() {
   };
 
   return (
-    <Box sx={{ width: 250 }}>
+    <Box sx={{ width: 300 }}>
       <Typography id="input-slider" gutterBottom>
         Volume
       </Typography>
-      <Grid container spacing={2} sx={{ alignItems: "center" }}>
+      <Grid container spacing={1} alignItems="center">
         <Grid item>
           <SvgIcon icon="volume_up" variant="filled" color="common.black" />
         </Grid>
-        <Grid item xs>
+        <Grid item>
           <Slider
             value={typeof value === "number" ? value : 0}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
           />
         </Grid>
+        
         <Grid item>
           <Input
             value={value}
             size="small"
             onChange={handleInputChange}
             onBlur={handleBlur}
+            variant="standard"
             inputProps={{
               step: 10,
               min: 0,
@@ -68,4 +70,4 @@ export default function InputSlider() {
     </Box>
   );
 }
-`
+`;

@@ -4,7 +4,10 @@ import { Chip, Stack, SvgIcon } from "@basetoolkit/ui";
 export default function IconChips() {
   return (
     <Stack direction="row" spacing={1}>
-      <Chip icon={<SvgIcon icon="account_circle" variant="filled" fontSize={20} />} label="With Icon" />
+      <Chip
+        icon={<SvgIcon icon="account_circle" variant="filled" fontSize={20} />}
+        label="With Icon"
+      />
       <Chip
         icon={<SvgIcon icon="account_circle" variant="filled" fontSize={20} />}
         label="With Icon"

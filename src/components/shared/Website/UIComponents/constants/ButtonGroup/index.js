@@ -56,24 +56,24 @@ export const buttonGroupSections = [
     view: BasicButtonGroupView,
   },
   {
-    id: "button-variants",
-    title: "#Button Variants",
+    id: "button-styles",
+    title: "#Button Styles",
     subtitle:
       "Demonstrates different ButtonGroup variants including outlined and text styles for flexibility in design.",
     source: VariantsSrc,
     view: VariantsView,
   },
   {
-    id: "size-and-colors",
-    title: "#Size and Colors",
+    id: "size-and-color",
+    title: "#Size and Color",
     subtitle:
       "Button groups in varying sizes (small, medium, large) and colors, highlighting the customization options for size and color.",
     source: SizesAndColorsSrc,
     view: SizesAndColorsView,
   },
   {
-    id: "vertical-grouping",
-    title: "#Vertical Grouping",
+    id: "vertical-buttons",
+    title: "#Vertical Buttons",
     subtitle:
       "Shows ButtonGroup with a vertical orientation in different variants, useful for aligning buttons in a column layout.",
     source: OrientationSrc,
@@ -98,7 +98,8 @@ export const buttonGroupSections = [
   {
     id: "loading-state",
     title: "#Loading State",
-    subtitle:"Demonstrates ButtonGroup with loading states, including a button that displays a loading spinner to indicate ongoing actions.",
+    subtitle:
+      "Demonstrates ButtonGroup with loading states, including a button that displays a loading spinner to indicate ongoing actions.",
     source: LoadingButtonGroupSrc,
     view: LoadingButtonGroupView,
   },

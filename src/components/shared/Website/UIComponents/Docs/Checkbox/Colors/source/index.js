@@ -1,17 +1,38 @@
 export const source = `
-import * as React from 'react';
-import { Checkbox } from '@basetoolkit/ui';
+import React from "react";
+import { Checkbox, FormControlLabel, FormGroup } from "@basetoolkit/ui";
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
-export default function BasicCheckboxesDemo() {
+const Colors = () => {
   return (
-    <div>
-      <Checkbox {...label} defaultChecked />
-      <Checkbox {...label} />
-      <Checkbox {...label} disabled />
-      <Checkbox {...label} disabled checked />
-    </div>
+    <FormGroup row>
+      <FormControlLabel
+        color="primary"
+        label="Primary"
+        defaultChecked
+        control={<Checkbox />}
+      />
+
+      <FormControlLabel
+        color="secondary"
+        label="Secondary"
+        defaultChecked
+        control={<Checkbox />}
+      />
+      <FormControlLabel
+        color="success"
+        label="Success"
+        defaultChecked
+        control={<Checkbox />}
+      />
+      <FormControlLabel
+        color="pink"
+        label="Custom Pink"
+        defaultChecked
+        control={<Checkbox />}
+      />
+    </FormGroup>
   );
-}
-`
+};
+
+export default Colors;
+`;

@@ -40,19 +40,25 @@ import {
   source as CustomizationSrc,
 } from "./../../../UIComponents/Docs/Checkbox/Customization";
 
-import { checkboxProps, formControlLabelProps, formControlProps, formGroupProps, formLabelProps } from "../../Api/PropsApi/constants";
+import {
+  checkboxProps,
+  formControlLabelProps,
+  formControlProps,
+  formGroupProps,
+  formLabelProps,
+} from "../../Api/PropsApi/constants";
 
 export const checkboxContent = [
-  { label: "#Standard Checkbox", href: "#standard-checkbox" },
-  { label: "#Icon Checkbox", href: "#icon-checkbox" },
-  { label: "#Label Checkbox", href: "#checkbox-label" },
-  { label: "#Checkbox Size", href: "#checkbox-size" },
-  { label: "#Checkbox Color", href: "#checkbox-color" },
-  { label: "#Controlled Checkbox", href: "#controlled-checkbox" },
-  { label: "#Indeterminate State", href: "#indeterminate-state" },
+  { label: "#Use Cases", href: "#use-cases" },
   { label: "#Checkbox Group", href: "#checkbox-group" },
-  { label: "#Label Placement", href: "#label-placement-options" },
-  { label: "#Custom Checkbox", href: "#custom-checkbox" },
+  { label: "#Size Options", href: "#size-options" },
+  { label: "#Colors", href: "#colors" },
+  { label: "#Icon Toggle", href: "#icon-toggle" },
+  { label: "#State Control", href: "#state-control" },
+  { label: "#Indeterminate Selection", href: "#indeterminate-selection" },
+  { label: "#Validation Example", href: "#validation-example" },
+  { label: "#Positioning Labels", href: "#positioning-labels" },
+  { label: "#Styled Checkboxes", href: "#styled-checkboxes" },
   { label: "<Checkbox />", href: "#checkbox-api" },
   { label: "<FormControl />", href: "#form-control-api" },
   { label: "<FormControlLabel />", href: "#form-control-label-api" },

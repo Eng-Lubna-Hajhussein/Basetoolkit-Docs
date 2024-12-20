@@ -1,6 +1,6 @@
 export const source = `
-import { Box, TextField } from '@basetoolkit/ui';
 import * as React from 'react';
+import { Box, TextField } from '@basetoolkit/ui';
 
 export default function ColorTextFields() {
   return (
@@ -21,4 +21,4 @@ export default function ColorTextFields() {
     </Box>
   );
 }
-`
+`;

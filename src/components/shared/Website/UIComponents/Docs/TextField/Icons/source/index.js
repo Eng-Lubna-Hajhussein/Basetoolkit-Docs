@@ -21,7 +21,7 @@ export default function InputWithIcon() {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <SvgIcon icon="account_circle" variant="filled" />
+                <SvgIcon icon="email" variant="filled" />
               </InputAdornment>
             ),
           }}
@@ -34,7 +34,7 @@ export default function InputWithIcon() {
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <SvgIcon icon="account_circle" variant="filled" />
+              <SvgIcon icon="email" variant="filled" />
             </InputAdornment>
           ),
         }}
@@ -42,7 +42,7 @@ export default function InputWithIcon() {
       />
       <Box sx={{ display: "flex", alignItems: "flex-end",width:300 }}>
         <SvgIcon
-          icon="account_circle"
+          icon="email"
           variant="filled"
           sx={{ color: "action.active", mr: 1, my: 0.5 }}
         />
@@ -51,4 +51,4 @@ export default function InputWithIcon() {
     </Box>
   );
 }
-`
+`;

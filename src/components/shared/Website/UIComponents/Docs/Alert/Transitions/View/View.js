@@ -1,11 +1,18 @@
-import * as React from 'react';
-import { Box,Alert,IconButton,Collapse,Button,SvgIcon } from '@basetoolkit/ui';
+import * as React from "react";
+import {
+  Box,
+  Alert,
+  IconButton,
+  Collapse,
+  Button,
+  SvgIcon,
+} from "@basetoolkit/ui";
 
 export default function TransitionAlerts() {
   const [open, setOpen] = React.useState(true);
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: "100%" }}>
       <Collapse in={open}>
         <Alert
           action={
@@ -16,7 +23,7 @@ export default function TransitionAlerts() {
                 setOpen(false);
               }}
             >
-              <SvgIcon icon='close' size="small" />
+              <SvgIcon icon="close" size="small" />
             </IconButton>
           }
           sx={{ mb: 2 }}

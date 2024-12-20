@@ -18,8 +18,13 @@ import {
   View as MixedArgumentsView,
   source as MixedArgumentsSrc,
 } from "./../../../../Toolkits/Docs/classnames/Usage/MixedArguments";
+import {
+  View as ImportSyntaxView,
+  source as ImportSyntaxSrc,
+} from "./../../../../Toolkits/Docs/classnames/ImportSyntax/Syntax";
 
 export const classnamesContent = [
+  { label: "#Import Syntax", href: "#import-syntax" },
   { label: "#Basic Usage", href: "#basic-usage" },
   { label: "#Array Handling", href: "#array-handling" },
   { label: "#Conditional Classes", href: "#conditional-classes" },
@@ -28,6 +33,13 @@ export const classnamesContent = [
 ];
 
 export const classnamesSections = [
+  {
+    id: "import-syntax",
+    title: "#Import Syntax",
+    subtitle: null,
+    source: ImportSyntaxSrc,
+    view: ImportSyntaxView,
+  },
   {
     id: "basic-usage",
     title: "#Basic Usage",

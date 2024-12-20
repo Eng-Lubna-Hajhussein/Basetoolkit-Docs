@@ -28,11 +28,11 @@ function HideOnScroll(props) {
 
 HideOnScroll.propTypes = {
   children: PropTypes.element,
-  targetRef: PropTypes.object.isRequired, // Added targetRef as a required prop
+  targetRef: PropTypes.object.isRequired,
 };
 
 export default function HideAppBar(props) {
-  const divRef = React.useRef(null); // Reference for the div element
+  const divRef = React.useRef(null); 
 
   const preventWindowScroll = (event) => {
     if (event.target === divRef.current) {

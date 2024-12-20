@@ -1,27 +1,85 @@
 export const source = `
-import * as React from "react";
-import { Box, Rating, Typography } from "@basetoolkit/ui";
+import React, { useState } from "react";
+import {
+  Box,
+  Grid,
+  Rating,
+  FormGroup,
+  FormControlLabel,
+  SvgIcon,
+} from "@basetoolkit/ui";
 
-export default function BasicRating() {
-  const [value, setValue] = React.useState(2);
+const BasicRating = () => {
+  const [value, setValue] = useState(2);
 
   return (
-    <Box sx={{ "& > legend": { mt: 2 } }}>
-      <Typography component="legend">Controlled</Typography>
-      <Rating
-        name="simple-controlled"
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-      />
-      <Typography component="legend">Read only</Typography>
-      <Rating name="read-only" value={value} readOnly />
-      <Typography component="legend">Disabled</Typography>
-      <Rating name="disabled" value={value} disabled />
-      <Typography component="legend">No rating given</Typography>
-      <Rating name="no-value" value={null} />
+    <Box sx={{ mt: 2 }}>
+      <FormGroup>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <FormControlLabel
+              name="simple-Basic"
+              value={value}
+              label="Controlled"
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+              control={<Rating />}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <FormControlLabel
+              label="Read Only"
+              control={
+                <Rating
+                  filledColor="secondary"
+                  name="read-only"
+                  value={value}
+                  readOnly
+                />
+              }
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <FormControlLabel
+              label="Disabled"
+              control={<Rating name="disabled" value={value} disabled />}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <FormControlLabel
+              label="Required"
+              required
+              control={
+                <Rating filledColor="warning" name="required" value={value} />
+              }
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <FormControlLabel
+              label="Null Value"
+              control={<Rating name="no-value" value={null} />}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <FormControlLabel
+              label="Custom"
+              control={
+                <Rating
+                  name="custom"
+                  filledColor="red"
+                  icon={"heart_broken"}
+                  emptyIcon={<SvgIcon icon="heart_broken" />}
+                  value={value}
+                />
+              }
+            />
+          </Grid>
+        </Grid>
+      </FormGroup>
     </Box>
   );
-}
-`
+};
+
+export default BasicRating;
+`;

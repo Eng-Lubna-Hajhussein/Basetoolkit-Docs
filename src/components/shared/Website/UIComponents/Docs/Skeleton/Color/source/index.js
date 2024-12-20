@@ -3,7 +3,7 @@ import * as React from "react";
 import { Skeleton, Box, colors } from "@basetoolkit/ui";
 
 export default function SkeletonColor() {
-    const {grey} = colors;
+  const { grey } = colors;
   return (
     <Box
       sx={{
@@ -23,4 +23,4 @@ export default function SkeletonColor() {
     </Box>
   );
 }
-`
+`;

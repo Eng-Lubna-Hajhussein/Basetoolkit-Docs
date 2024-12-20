@@ -74,7 +74,7 @@ export default function TransferList() {
           return (
             <ListItemButton key={value} role="listitem">
               <ListItemIcon>
-                <Checkbox
+                <Checkbox color="warning" 
                   onChange={handleToggle(value)}
                   checked={checked.includes(value)}
                   tabIndex={-1}
@@ -84,7 +84,7 @@ export default function TransferList() {
                   }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={\`List item \${value + 1}\`} />
+              <ListItemText id={labelId} primary={\`To Do Item \${value + 1}\`} />
             </ListItemButton>
           );
         })}
@@ -103,7 +103,7 @@ export default function TransferList() {
         <Grid container direction="column" sx={{ alignItems: "center" }}>
           <Button
             sx={{ my: 0.5 }}
-            variant="outlined"
+            variant="contained" color="secondary"
             size="small"
             onClick={handleAllRight}
             disabled={left.length === 0}
@@ -113,7 +113,7 @@ export default function TransferList() {
           </Button>
           <Button
             sx={{ my: 0.5 }}
-            variant="outlined"
+            variant="outlined" color="default"
             size="small"
             onClick={handleCheckedRight}
             disabled={leftChecked.length === 0}
@@ -123,7 +123,7 @@ export default function TransferList() {
           </Button>
           <Button
             sx={{ my: 0.5 }}
-            variant="outlined"
+            variant="outlined" color="default"
             size="small"
             onClick={handleCheckedLeft}
             disabled={rightChecked.length === 0}
@@ -133,7 +133,7 @@ export default function TransferList() {
           </Button>
           <Button
             sx={{ my: 0.5 }}
-            variant="outlined"
+            variant="contained" color="secondary"
             size="small"
             onClick={handleAllLeft}
             disabled={right.length === 0}

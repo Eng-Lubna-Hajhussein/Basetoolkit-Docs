@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Alert, Stack } from "@basetoolkit/ui";
 
-export default function BasicAlerts() {
+export default function AlertsSeverity() {
   return (
     <Stack sx={{ width: "100%" }} spacing={2} alignItems="center">
       <Alert severity="success">This is a success Alert.</Alert>

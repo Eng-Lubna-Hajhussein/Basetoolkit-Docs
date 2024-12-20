@@ -43,7 +43,7 @@ export const iconsContent = [
   { label: "#Color", href: "#color" },
   { label: "#Size", href: "#size" },
   { label: "#Font Size", href: "#font-size" },
-  { label: "#Partially Filled Icon", href: "partially-filled-icon" },
+  { label: "#Partially Filled Icon", href: "#partially-filled-icon" },
   { label: "#Icon Button", href: "#icon-button" },
   { label: "#Customization", href: "#customization" },
   { label: "<SvgIcon />", href: "#svgicon-api" },

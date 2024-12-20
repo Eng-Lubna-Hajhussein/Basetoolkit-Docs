@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Box, Grid, Rating, FormGroup, FormControlLabel, SvgIcon } from "@basetoolkit/ui";
+import {
+  Box,
+  Grid,
+  Rating,
+  FormGroup,
+  FormControlLabel,
+  SvgIcon,
+} from "@basetoolkit/ui";
 
 const BasicRating = () => {
   const [value, setValue] = useState(2);
@@ -13,8 +20,7 @@ const BasicRating = () => {
               name="simple-Basic"
               value={value}
               label="Controlled"
-              
-              onChange={( newValue) => {
+              onChange={(newValue) => {
                 setValue(newValue);
               }}
               control={<Rating />}
@@ -23,35 +29,40 @@ const BasicRating = () => {
           <Grid item xs={4}>
             <FormControlLabel
               label="Read Only"
-              
-              control={<Rating filledColor="secondary" name="read-only" value={value} readOnly />}
+              control={
+                <Rating
+                  filledColor="secondary"
+                  name="read-only"
+                  value={value}
+                  readOnly
+                />
+              }
             />
           </Grid>
           <Grid item xs={4}>
             <FormControlLabel
               label="Disabled"
-              
-              control={<Rating  name="disabled" value={value} disabled />}
+              control={<Rating name="disabled" value={value} disabled />}
             />
           </Grid>
           <Grid item xs={4}>
             <FormControlLabel
               label="Required"
               required
-              control={<Rating filledColor="warning" name="required" value={value} />}
+              control={
+                <Rating filledColor="warning" name="required" value={value} />
+              }
             />
           </Grid>
           <Grid item xs={4}>
             <FormControlLabel
               label="Null Value"
-              
               control={<Rating name="no-value" value={null} />}
             />
           </Grid>
           <Grid item xs={4}>
             <FormControlLabel
               label="Custom"
-              
               control={
                 <Rating
                   name="custom"

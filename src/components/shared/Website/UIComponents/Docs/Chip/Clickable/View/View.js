@@ -9,7 +9,12 @@ export default function ClickableChips() {
   return (
     <Stack direction="column" spacing={1}>
       <Chip label="Clickable" clickable onClick={handleClick} />
-      <Chip label="Clickable" clickable variant="outlined" onClick={handleClick} />
+      <Chip
+        label="Clickable"
+        clickable
+        variant="outlined"
+        onClick={handleClick}
+      />
     </Stack>
   );
 }

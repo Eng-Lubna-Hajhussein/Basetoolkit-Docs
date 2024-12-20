@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { TextField, Autocomplete, CircularProgress, Stack } from '@basetoolkit/ui';
+import React, { useState } from "react";
+import { TextField, Autocomplete, Stack } from "@basetoolkit/ui";
 
 function simulateApiRequest(duration) {
   return new Promise((resolve) => setTimeout(resolve, duration));
 }
 
 const asyncCountryOptions = [
-  { name: 'Canada' },
-  { name: 'United States' },
-  { name: 'Mexico' },
-  { name: 'Brazil' },
-  { name: 'Germany' },
-  { name: 'France' },
-  { name: 'Japan' },
-  { name: 'China' },
-  { name: 'Australia' },
+  { name: "Canada" },
+  { name: "United States" },
+  { name: "Mexico" },
+  { name: "Brazil" },
+  { name: "Germany" },
+  { name: "France" },
+  { name: "Japan" },
+  { name: "China" },
+  { name: "Australia" },
 ];
 
 export default function AsyncAutocompleteDemo() {

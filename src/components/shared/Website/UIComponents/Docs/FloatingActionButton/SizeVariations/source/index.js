@@ -1,24 +1,22 @@
 export const source = `
-import * as React from "react";
+import React from "react";
 import { Box, Fab, SvgIcon } from "@basetoolkit/ui";
 
-export default function FloatingActionButtons() {
+const SizeVariations = () => {
   return (
-    <Box sx={{ "& > :not(style)": { m: 1 } }}>
-      <Fab color="primary" aria-label="add">
-        <SvgIcon icon="add" color="common.white" />
+    <Box sx={{ display: "flex", gap: 2 }}>
+      <Fab size="small" color="primary" aria-label="add">
+        <SvgIcon icon="edit" variant="filled" color="white" />
       </Fab>
-      <Fab color="secondary" aria-label="edit">
-        <SvgIcon icon="edit" color="common.white" variant="filled" />
+      <Fab size="medium" color="primary" aria-label="add">
+        <SvgIcon icon="edit" variant="filled" color="white" />
       </Fab>
-      <Fab variant="extended" textColor="common.black">
-        <SvgIcon icon="navigation" color="common.black" variant="filled"  sx={{ mr: 1 }} />
-        Navigate
-      </Fab>
-      <Fab disabled aria-label="like">
-        <SvgIcon icon="favorite" color="divider" />
+      <Fab size="large" color="primary" aria-label="add">
+        <SvgIcon icon="edit" variant="filled" color="white" />
       </Fab>
     </Box>
   );
-}
+};
+
+export default SizeVariations;
 `;

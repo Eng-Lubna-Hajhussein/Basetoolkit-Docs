@@ -1,10 +1,18 @@
 export const source = `
-import * as React from 'react';
-import { Accordion,AccordionActions,AccordionSummary,AccordionDetails,Button,SvgIcon, Box } from '@basetoolkit/ui';
+import * as React from "react";
+import {
+  Accordion,
+  AccordionActions,
+  AccordionSummary,
+  AccordionDetails,
+  Button,
+  SvgIcon,
+  Box,
+} from "@basetoolkit/ui";
 
 export default function AccordionUsage() {
   return (
-    <div style={{width:"100%"}}>
+    <div style={{ width: "100%" }}>
       <Accordion>
         <AccordionSummary
           expandIcon={<SvgIcon icon="expand_more" />}

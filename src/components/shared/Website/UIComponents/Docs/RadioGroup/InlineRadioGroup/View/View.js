@@ -1,5 +1,11 @@
-import React from 'react';
-import { Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from '@basetoolkit/ui';
+import React from "react";
+import {
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+  FormLabel,
+} from "@basetoolkit/ui";
 
 const InlineRadioGroup = () => {
   return (
@@ -13,7 +19,12 @@ const InlineRadioGroup = () => {
         <FormControlLabel value="female" control={<Radio />} label="Female" />
         <FormControlLabel value="male" control={<Radio />} label="Male" />
         <FormControlLabel value="other" control={<Radio />} label="Other" />
-        <FormControlLabel value="disabled" control={<Radio />} label="Other" disabled />
+        <FormControlLabel
+          value="disabled"
+          control={<Radio />}
+          label="Other"
+          disabled
+        />
       </RadioGroup>
     </FormControl>
   );

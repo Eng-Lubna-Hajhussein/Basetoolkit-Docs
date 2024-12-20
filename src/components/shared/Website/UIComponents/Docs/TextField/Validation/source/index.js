@@ -14,47 +14,47 @@ export default function ValidationTextFields() {
           error
           id="outlined-error"
           label="Error"
-          defaultValue="Hello World"
+          defaultValue="Error Input"
         />
         <TextField
           error
           id="outlined-error-helper-text"
           label="Error"
-          defaultValue="Hello World"
-          helperText="Incorrect entry."
+          defaultValue="Error Input"
+          helperText="Incorrect."
         />
         <TextField
           error
           id="filled-error"
           label="Error"
-          defaultValue="Hello World"
+          defaultValue="Error Input"
           variant="filled"
         />
         <TextField
           error
           id="filled-error-helper-text"
           label="Error"
-          defaultValue="Hello World"
-          helperText="Incorrect entry."
+          defaultValue="Error Input"
+          helperText="Incorrect."
           variant="filled"
         />
         <TextField
           error
           id="standard-error"
           label="Error"
-          defaultValue="Hello World"
+          defaultValue="Error Input"
           variant="standard"
         />
         <TextField
           error
           id="standard-error-helper-text"
           label="Error"
-          defaultValue="Hello World"
-          helperText="Incorrect entry."
+          defaultValue="Error Input"
+          helperText="Incorrect."
           variant="standard"
         />
       </Stack>
     </Box>
   );
 }
-`
+`;

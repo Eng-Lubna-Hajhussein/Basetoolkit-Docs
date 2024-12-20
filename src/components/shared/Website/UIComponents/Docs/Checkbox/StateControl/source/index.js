@@ -1,17 +1,12 @@
 export const source = `
-import * as React from 'react';
-import { Checkbox } from '@basetoolkit/ui';
+import React, { useState } from "react";
+import { Checkbox } from "@basetoolkit/ui";
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+const StateControl = () => {
+  const [checked, setChecked] = useState(true);
 
-export default function BasicCheckboxesDemo() {
-  return (
-    <div>
-      <Checkbox {...label} defaultChecked />
-      <Checkbox {...label} />
-      <Checkbox {...label} disabled />
-      <Checkbox {...label} disabled checked />
-    </div>
-  );
-}
-`
+  return <Checkbox checked={checked} onChange={() => setChecked(!checked)} />;
+};
+
+export default StateControl;
+`;

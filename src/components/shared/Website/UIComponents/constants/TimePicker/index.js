@@ -16,7 +16,7 @@ export const timePickerContent = [
   { label: "#Basic Usage", href: "#basic-usage" },
   {
     label: "#Controlled Time Picker Value",
-    href: "#controlled-time-Picker-value",
+    href: "#controlled-time-picker-value",
   },
   { label: "#TimePicker with Seconds", href: "#time-picker-with-seconds" },
   { label: "<TimePicker />", href: "#time-picker-api" },

@@ -17,7 +17,8 @@ const Item = styled((props) => <Paper bgcolor="divider" p={2} {...props} />)(
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: "center",
-    display:"flex",alignItems:"center",
+    display: "flex",
+    alignItems: "center",
     color: theme.palette.text.secondary,
     ...theme.applyStyles("dark", {
       backgroundColor: "#1A2027 !important",

@@ -61,7 +61,7 @@ const FlatIcon = styled("span")({
 });
 
 const FlatCheckedIcon = styled(FlatIcon)({
-  backgroundColor:t=>t.palette.primary.light +" !important",
+  backgroundColor: (t) => t.palette.primary.light + " !important",
   "&::before": {
     display: "block",
     width: 16,

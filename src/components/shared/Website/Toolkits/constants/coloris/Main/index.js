@@ -7,8 +7,10 @@ import { View as OklabView, source as OklabSrc } from "./../../../../Toolkits/Do
 import { View as OklchView, source as OklchSrc } from "./../../../../Toolkits/Docs/coloris/Main/Oklch";
 import { View as CmykView, source as CmykSrc } from "./../../../../Toolkits/Docs/coloris/Main/Cmyk";
 import { View as GlView, source as GlSrc } from "./../../../../Toolkits/Docs/coloris/Main/Gl";
+import { View as ImportSyntaxView, source as ImportSyntaxSrc } from "./../../../../Toolkits/Docs/coloris/ImportSyntax/Syntax";
 
 export const mainContent = [
+  { label: "#Import Syntax", href: "#import-syntax" },
     { label: "#valid", href: "#coloris-valid" },
     { label: "#hsl", href: "#coloris-hsl" },
     { label: "#lab", href: "#coloris-lab" },
@@ -22,6 +24,13 @@ export const mainContent = [
   
 
 export const mainSections = [
+  {
+    id: "import-syntax",
+    title: "#Import Syntax",
+    subtitle: null,
+    source: ImportSyntaxSrc,
+    view: ImportSyntaxView,
+  },
   {
     id: "coloris-valid",
     title: "#coloris.valid",

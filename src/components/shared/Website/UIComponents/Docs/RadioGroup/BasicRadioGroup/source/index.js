@@ -1,30 +1,29 @@
 export const source = `
-import * as React from "react";
-import { colors,Radio } from "@basetoolkit/ui";
+import React from "react";
+import {
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+  FormLabel,
+} from "@basetoolkit/ui";
 
-export default function ColorRadioButtons() {
-  const [selectedValue, setSelectedValue] = React.useState("a");
-
-  const handleChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
-
-  const controlProps = (item) => ({
-    checked: selectedValue === item,
-    onChange: handleChange,
-    value: item,
-    name: "color-radio-button-demo",
-    inputProps: { "aria-label": item },
-  });
-
+const BasicRadioGroup = () => {
   return (
-    <div>
-      <Radio {...controlProps("a")} />
-      <Radio {...controlProps("b")} color="secondary" />
-      <Radio {...controlProps("c")} color="success" />
-      <Radio {...controlProps("d")} color="default" />
-      <Radio {...controlProps("e")} color={colors.pink[600]} />
-    </div>
+    <FormControl>
+      <FormLabel id="basic-radio-group-label">Gender</FormLabel>
+      <RadioGroup
+        aria-labelledby="basic-radio-group-label"
+        defaultValue="female"
+        name="basic-radio-group"
+      >
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+        <FormControlLabel value="other" control={<Radio />} label="Other" />
+      </RadioGroup>
+    </FormControl>
   );
-}
-`
+};
+
+export default BasicRadioGroup;
+`;

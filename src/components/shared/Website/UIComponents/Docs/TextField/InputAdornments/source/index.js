@@ -29,36 +29,39 @@ export default function InputAdornments() {
     <Grid container spacing={2}>
       <Grid item xs={6}>
         <TextField
-          label="With normal TextField"
+          label="Username"
           id="outlined-start-adornment"
           InputProps={{
             startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
+              <InputAdornment position="start">@</InputAdornment>
             ),
           }}
+          helperText="Enter your unique username."
         />
       </Grid>
       <Grid item xs={6}>
         <FormControl sx={{ width: "25ch" }} variant="outlined">
           <TextField
             variant="outlined"
-            id="outlined-adornment-weight"
+            id="outlined-adornment-email"
             InputProps={{
-              endAdornment: <InputAdornment position="end">kg</InputAdornment>,
+              endAdornment: (
+                <InputAdornment position="end">.com</InputAdornment>
+              ),
             }}
-            aria-describedby="outlined-weight-helper-text"
+            aria-describedby="outlined-email-helper-text"
             inputProps={{
-              "aria-label": "weight",
+              "aria-label": "email",
             }}
-            helperText="Weight"
+            helperText="Provide your email address."
+            label="Email"
           />
         </FormControl>
       </Grid>
       <Grid item xs={6}>
-        {" "}
         <FormControl sx={{ width: "25ch" }} variant="outlined">
           <TextField
-            value="outlined"
+            value=""
             id="outlined-adornment-password"
             type={showPassword ? "text" : "password"}
             InputProps={{
@@ -81,168 +84,83 @@ export default function InputAdornments() {
               ),
             }}
             label="Password"
+            helperText="Use a strong password."
           />
         </FormControl>
       </Grid>
       <Grid item xs={8}>
         <FormControl fullWidth sx={{ my: 1 }}>
           <TextField
-            value="outlined"
-            id="outlined-adornment-amount"
+            value=""
+            id="outlined-adornment-code"
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">$</InputAdornment>
+                <InputAdornment position="start">#</InputAdornment>
               ),
             }}
-            label="Amount"
+            label="Security Code"
+            helperText="Enter the 6-digit security code."
           />
         </FormControl>
       </Grid>
       <Grid item xs={6}>
         <TextField
-          label="With normal TextField"
+          label="Referral Code"
           id="filled-start-adornment"
           sx={{ width: "25ch" }}
           InputProps={{
             startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
+              <InputAdornment position="start">REF</InputAdornment>
             ),
           }}
           variant="filled"
+          helperText="Optional: Enter your referral code."
         />
       </Grid>
       <Grid item xs={6}>
         <FormControl sx={{ width: "25ch" }} variant="filled">
+          <InputLabel htmlFor="filled-adornment-code">Verification</InputLabel>
           <TextField
-            variant="filled"
-            id="filled-adornment-weight"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">kg</InputAdornment>,
-            }}
-            aria-describedby="filled-weight-helper-text"
-            inputProps={{
-              "aria-label": "weight",
-            }}
-          />
-          <FormHelperText id="filled-weight-helper-text">Weight</FormHelperText>
-        </FormControl>
-      </Grid>
-      <Grid item xs={6}>
-        <FormControl sx={{ width: "25ch" }} variant="filled">
-          <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
-          <TextField
-            variant="filled"
-            id="filled-adornment-password"
-            type={showPassword ? "text" : "password"}
+            id="filled-adornment-code"
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    onMouseUp={handleMouseUpPassword}
-                    edge="end"
-                  >
-                    {showPassword ? (
-                      <SvgIcon icon="visibility_off" variant="filled" />
-                    ) : (
-                      <SvgIcon icon="visibility" variant="filled" />
-                    )}
-                  </IconButton>
+                  <SvgIcon icon="verified" variant="filled" />
                 </InputAdornment>
               ),
             }}
+            helperText="Provide a valid verification code."
           />
         </FormControl>
       </Grid>
       <Grid item xs={8}>
         <FormControl fullWidth sx={{ my: 1 }} variant="filled">
-          <InputLabel htmlFor="filled-adornment-amount">Amount</InputLabel>
+          <InputLabel htmlFor="filled-adornment-note">Note</InputLabel>
           <TextField
-            variant="filled"
+            id="filled-adornment-note"
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">$</InputAdornment>
+                <InputAdornment position="start">📋</InputAdornment>
               ),
             }}
-            id="filled-adornment-amount"
+            helperText="Add a note (optional)."
           />
         </FormControl>
       </Grid>
       <Grid item xs={6}>
         <TextField
-          label="With normal TextField"
+          label="Profile Link"
           id="standard-start-adornment"
           InputProps={{
             startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
+              <InputAdornment position="start">https://</InputAdornment>
             ),
           }}
           variant="standard"
+          helperText="Enter your profile URL."
         />
-      </Grid>
-
-      <Grid item xs={6}>
-        <FormControl variant="standard" sx={{ width: "25ch" }}>
-          <TextField
-            id="standard-adornment-weight"
-            InputProps={{
-              endAdornment: <InputAdornment position="end">kg</InputAdornment>,
-            }}
-            aria-describedby="standard-weight-helper-text"
-            inputProps={{
-              "aria-label": "weight",
-            }}
-          />
-          <FormHelperText id="standard-weight-helper-text">
-            Weight
-          </FormHelperText>
-        </FormControl>
-      </Grid>
-      <Grid item xs={6}>
-        <FormControl sx={{ width: "25ch" }} variant="standard">
-          <InputLabel htmlFor="standard-adornment-password">
-            Password
-          </InputLabel>
-          <TextField
-            id="standard-adornment-password"
-            type={showPassword ? "text" : "password"}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    onMouseUp={handleMouseUpPassword}
-                  >
-                    {showPassword ? (
-                      <SvgIcon icon="visibility_off" variant="filled" />
-                    ) : (
-                      <SvgIcon icon="visibility" variant="filled" />
-                    )}
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
-          />
-        </FormControl>
-      </Grid>
-      <Grid item xs={8}>
-        <FormControl fullWidth sx={{ my: 1 }} variant="standard">
-          <InputLabel htmlFor="standard-adornment-amount">Amount</InputLabel>
-          <TextField
-            id="standard-adornment-amount"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">$</InputAdornment>
-              ),
-            }}
-          />
-        </FormControl>
       </Grid>
     </Grid>
   );
 }
-`
+`;

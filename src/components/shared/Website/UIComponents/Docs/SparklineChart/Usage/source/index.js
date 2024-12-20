@@ -17,11 +17,6 @@ export default function Usage() {
           min: 0,
           max: 100,
         }}
-        // data={[0, 2, 3, 4, 6, 8, 7, 9, 15, 6, 8, 7, 12]}
-        // yAxis={{
-        //   min: 0,
-        //   max: 100,
-        // }}
         height={100}
         width={300}
         area={true}

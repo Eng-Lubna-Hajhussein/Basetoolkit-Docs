@@ -1,11 +1,11 @@
-import React from 'react';
-import { Autocomplete, TextField } from '@basetoolkit/ui';
+import React from "react";
+import { Autocomplete, TextField } from "@basetoolkit/ui";
 
 const fruitOptions = [
-  { name: 'Apple', disabled: false },
-  { name: 'Banana', disabled: true },
-  { name: 'Cherry', disabled: false },
-  { name: 'Date', disabled: true },
+  { name: "Apple", disabled: false },
+  { name: "Banana", disabled: true },
+  { name: "Cherry", disabled: false },
+  { name: "Date", disabled: true },
 ];
 
 export default function DisabledOptions() {

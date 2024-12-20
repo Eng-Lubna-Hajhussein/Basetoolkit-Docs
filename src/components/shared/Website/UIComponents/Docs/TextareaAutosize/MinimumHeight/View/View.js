@@ -1,5 +1,5 @@
-import { TextareaAutosize as BaseTextareaAutosize, cssInjection as styled } from "@basetoolkit/ui";
 import * as React from "react";
+import { TextareaAutosize as BaseTextareaAutosize, cssInjection as styled } from "@basetoolkit/ui";
 
 export default function MinHeightTextarea() {
   const blue = {

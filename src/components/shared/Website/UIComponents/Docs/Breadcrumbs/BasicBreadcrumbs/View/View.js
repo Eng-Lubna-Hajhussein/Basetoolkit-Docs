@@ -13,11 +13,7 @@ export default function BasicBreadcrumbs() {
         <Link underline="hover" color="inherit" href="#base">
           Base
         </Link>
-        <Link
-          underline="hover"
-          color="inherit"
-          href="#core"
-        >
+        <Link underline="hover" color="inherit" href="#core">
           Core
         </Link>
         <Typography sx={{ color: "text.primary" }}>Breadcrumbs</Typography>

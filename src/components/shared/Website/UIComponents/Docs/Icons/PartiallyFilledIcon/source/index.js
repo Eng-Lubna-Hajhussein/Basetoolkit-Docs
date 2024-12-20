@@ -7,8 +7,7 @@ function PartiallyFilledIconDemo() {
     <Stack spacing={4}>
       <Stack direction="row" spacing={3} alignItems="center">
         <Box display={"flex"} flexDirection="column" alignItems="center">
-          
-           <PartiallyFilledIcon
+          <PartiallyFilledIcon
             icon="star"
             fillPercentage={0.43}
             size="large"
@@ -17,25 +16,25 @@ function PartiallyFilledIconDemo() {
           <Typography variant="body2">43%</Typography>
         </Box>
         <Box display={"flex"} flexDirection="column" alignItems="center">
-        <PartiallyFilledIcon
+          <PartiallyFilledIcon
             icon="favorite"
-            fillPercentage={0.50}
+            fillPercentage={0.5}
             size="large"
             filledColor="#FF5733"
           />
           <Typography variant="body2">50%</Typography>
         </Box>
         <Box display={"flex"} flexDirection="column" alignItems="center">
-        <PartiallyFilledIcon
+          <PartiallyFilledIcon
             icon="favorite_border"
-            fillPercentage={0.60}
+            fillPercentage={0.6}
             size="large"
             filledColor="hotpink"
           />
           <Typography variant="body2">60%</Typography>
         </Box>
         <Box display={"flex"} flexDirection="column" alignItems="center">
-        <PartiallyFilledIcon
+          <PartiallyFilledIcon
             icon="home"
             fillPercentage={0.41}
             size="large"

@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { BarChart, Box } from '@basetoolkit/ui';
+import * as React from "react";
+import { BarChart, Box } from "@basetoolkit/ui";
 
 export default function StackedData() {
   return (
-    <Box display='flex' justifyContent='center'>
+    <Box display="flex" justifyContent="center">
       <BarChart
         xAxis={["group A", "group B", "group C"]}
         yAxis={[0, 2, 4, 6, 8]}

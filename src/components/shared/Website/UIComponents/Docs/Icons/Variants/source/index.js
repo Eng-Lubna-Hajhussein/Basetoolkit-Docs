@@ -30,4 +30,4 @@ function Variants() {
 }
 
 export default Variants;
-`
+`;

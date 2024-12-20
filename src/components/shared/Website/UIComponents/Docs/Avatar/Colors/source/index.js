@@ -1,41 +1,18 @@
 export const source = `
 import * as React from "react";
-import { Avatar, Stack } from "@basetoolkit/ui";
-
-function stringToColor(string) {
-  let hash = 0;
-  let i;
-
-  /* eslint-disable no-bitwise */
-  for (i = 0; i < string.length; i += 1) {
-    hash = string.charCodeAt(i) + ((hash << 5) - hash);
-  }
-
-  let color = "#";
-
-  for (i = 0; i < 3; i += 1) {
-    const value = (hash >> (i * 8)) & 0xff;
-    color += \`00\${value.toString(16)}\`.slice(-2);
-  }
-  /* eslint-enable no-bitwise */
-
-  return color;
-}
-
-function stringAvatar(name) {
-  return {
-    bgcolor: stringToColor(name),
-    children: \`\${name.split(" ")[0][0]}\${name.split(" ")[1][0]}\`,
-  };
-}
+import { alpha, Avatar, Stack, useTheme, colors } from "@basetoolkit/ui";
 
 export default function BackgroundLetterAvatars() {
+  const theme = useTheme();
   return (
     <Stack direction="row" spacing={2}>
-      <Avatar {...stringAvatar("Kent Dodds")} />
-      <Avatar {...stringAvatar("Jed Watson")} />
-      <Avatar {...stringAvatar("Tim Neutkens")} />
+      <Avatar bgcolor="warning">A</Avatar>
+      <Avatar bgcolor="secondary">B</Avatar>
+      <Avatar bgcolor={alpha(theme.palette.secondary.main, 0.5)}>R</Avatar>
+      <Avatar bgcolor={colors.red[500]}>L</Avatar>
+      <Avatar bgcolor={colors.pink[500]}>LH</Avatar>
+      <Avatar bgcolor={colors.green[500]}>YES</Avatar>
     </Stack>
   );
 }
-`
+`;

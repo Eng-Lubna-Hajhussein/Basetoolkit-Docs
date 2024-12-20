@@ -36,16 +36,16 @@ export default function BadgeVisibility() {
     >
       <Stack direction={"row"}>
         <Badge color="secondary" badgeContent={count}>
-          <SvgIcon icon="mail" variant="filled" />
+          <SvgIcon color="black" icon="settings" variant="filled" />
         </Badge>
-        <ButtonGroup>
+        <ButtonGroup  variant="contained" alpha={.8}>
           <Button
             aria-label="reduce"
             onClick={() => {
               setCount(Math.max(count - 1, 0));
             }}
           >
-            <SvgIcon icon="remove" size="small" />
+            <SvgIcon icon="remove" color="white" size="small" />
           </Button>
           <Button
             aria-label="increase"
@@ -53,13 +53,13 @@ export default function BadgeVisibility() {
               setCount(count + 1);
             }}
           >
-            <SvgIcon icon="add" size="small" />
+            <SvgIcon icon="add" color="white" size="small" />
           </Button>
         </ButtonGroup>
       </Stack>
       <Stack direction={"row"} mt={2}>
         <Badge color="secondary" variant="dot" invisible={invisible}>
-          <SvgIcon icon="mail" variant="filled" />
+          <SvgIcon icon="email" color="warning" variant="filled" />
         </Badge>
         <FormControlLabel
           sx={{ color: "text.primary" }}

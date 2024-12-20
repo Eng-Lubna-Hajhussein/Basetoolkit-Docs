@@ -32,7 +32,7 @@ export default function CountryByContinent() {
         options={flattenedOptions}
         multiple
         disableCloseOnSelect
-        defaultValue={[flattenedOptions[3],flattenedOptions[1]]}
+        defaultValue={[flattenedOptions[3], flattenedOptions[1]]}
         getOptionLabel={(option) =>
           option.isCategory
             ? option.continent

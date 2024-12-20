@@ -2,7 +2,7 @@ export const source = `
 import * as React from "react";
 import { Button, Stack, SvgIcon } from "@basetoolkit/ui";
 
-function IconButtons() {
+function ButtonsWithIcons() {
   return (
     <Stack direction="row" spacing={2}>
       <Button
@@ -21,5 +21,5 @@ function IconButtons() {
   );
 }
 
-export default IconButtons;
+export default ButtonsWithIcons;
 `;

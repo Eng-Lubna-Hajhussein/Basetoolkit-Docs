@@ -14,7 +14,6 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-start !important",
   paddingTop: theme.spacing(1) +" !important",
   paddingBottom: theme.spacing(2) +" !important",
-  // Override media queries injected by theme.mixins.toolbar
   "@media all": {
     height: 128,
   },
@@ -47,4 +46,4 @@ export default function ProminentAppBar() {
     </Box>
   );
 }
-`
+`;

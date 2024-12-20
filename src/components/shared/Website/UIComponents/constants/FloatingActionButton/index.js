@@ -17,12 +17,13 @@ import {
 import { fabProps } from "../../Api/PropsApi/constants";
 
 export const floatingActionButtonContent = [
-  { label: "#Standard FAB", href: "#standard-fab" },
-  { label: "#Small and Large", href: "#small-and-large" },
-  { label: "#Extended FAB", href: "#extended-fab" },
-  { label: "#FAB With Animation", href: "#fab-with-animation" },
+  { label: "#Basic Actions", href: "#basic-actions" },
+  { label: "#Size Variations", href: "#size-variations" },
+  { label: "#Extended Button Sizes", href: "#extended-button-sizes" },
+  { label: "#Tabbed Animated Actions", href: "#tabbed-animated-actions" },
   { label: "<Fab />", href: "#fab-api" },
 ];
+
 
 export const floatingActionButtonSections = [
   {

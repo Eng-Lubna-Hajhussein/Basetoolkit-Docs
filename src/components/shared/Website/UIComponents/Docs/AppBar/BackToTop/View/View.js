@@ -14,9 +14,6 @@ import {
 
 function ScrollTop(props) {
   const { children, targetRef } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: targetRef.current ? targetRef.current : undefined,
     disableHysteresis: true, // Disable any delay for triggering
@@ -57,15 +54,11 @@ function ScrollTop(props) {
 
 ScrollTop.propTypes = {
   children: PropTypes.element,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
 export default function BackToTop(props) {
-  const divRef = React.useRef(null); // Reference for the div element
+  const divRef = React.useRef(null);
 
   const preventWindowScroll = (event) => {
     if (event.target === divRef.current) {
@@ -97,7 +90,10 @@ export default function BackToTop(props) {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Toolbar id="back-to-top-anchor" style={{height:0,maxHeight:0,minHeight:0}} />
+      <Toolbar
+        id="back-to-top-anchor"
+        style={{ height: 0, maxHeight: 0, minHeight: 0 }}
+      />
       <Container>
         <Box sx={{ my: 2 }}>
           {[...new Array(12)]

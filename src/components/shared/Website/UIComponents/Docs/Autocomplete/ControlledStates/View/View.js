@@ -15,9 +15,7 @@ export default function ControlledInputs() {
 
   return (
     <Stack spacing={2} sx={{ width: 300 }}>
-      <div>{`Selected: ${
-        selectedCountry ? selectedCountry.name : null
-      }`}</div>
+      <div>{`Selected: ${selectedCountry ? selectedCountry.name : null}`}</div>
       <div>{`Input: ${countryInput}`}</div>
 
       <Autocomplete

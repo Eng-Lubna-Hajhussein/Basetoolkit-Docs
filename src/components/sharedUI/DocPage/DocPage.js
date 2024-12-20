@@ -27,13 +27,13 @@ function DocPage({ content, sections, title, description }) {
     theme.breakpoints.between("md", "lg")
   );
   const [loading, setLoading] = useState(true);
-  const [scrollLoading, setScrollLoading] = useState(false);
+  // const [scrollLoading, setScrollLoading] = useState(false);
   const contentRef = useRef(null);
-  const [renderedSections, setRenderedSections] = useState(1);
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
+  // const [renderedSections, setRenderedSections] = useState(1);
+  // const trigger = useScrollTrigger({
+  //   disableHysteresis: true,
+  //   threshold: 0,
+  // });
 
   useEffect(() => {
     if (contentRef.current) {
@@ -41,25 +41,25 @@ function DocPage({ content, sections, title, description }) {
     }
   }, []);
 
-  useEffect(() => {
-    if (trigger && renderedSections < 2 && sections.length > 4) {
-      setScrollLoading(true);
-      setTimeout(() => {
-        setRenderedSections((prevSections) => Math.min(prevSections + 1, 2));
-        setScrollLoading(false);
-      }, 1000);
-    }
-  }, [trigger]);
+  // useEffect(() => {
+  //   if (trigger && renderedSections < 2 && sections.length > 4) {
+  //     setScrollLoading(true);
+  //     setTimeout(() => {
+  //       setRenderedSections((prevSections) => Math.min(prevSections + 1, 2));
+  //       setScrollLoading(false);
+  //     }, 1000);
+  //   }
+  // }, [trigger]);
 
   const { link, section2Link } = useCSSClass({
     link: { color: "#000", "&:hover": { color: "primary" } },
-    section2Link:
-      renderedSections === 2
-        ? {}
-        : {
-            opacity: 0.5,
-            pointerEvents: "none",
-          },
+    section2Link:{}
+      // renderedSections === 2
+      //   ? {}
+      //   : {
+      //       opacity: 0.5,
+      //       pointerEvents: "none",
+      //     },
   });
 
   return (
@@ -91,7 +91,7 @@ function DocPage({ content, sections, title, description }) {
                 <Typography variant="subtitle1">{description}</Typography>
               </Grid>
 
-              {renderedSections >= 1 && (
+              {/* {renderedSections >= 1 && ( */}
                 <div style={{ width: blnMidScreen ? "97%" : "100%" }}>
                   {sections
                     .slice(0, 4)
@@ -151,8 +151,8 @@ function DocPage({ content, sections, title, description }) {
                       )
                     )}
                 </div>
-              )}
-              {scrollLoading && (
+              {/* )} */}
+              {/* {scrollLoading && (
                 <Box
                   display="flex"
                   height={"50vh"}
@@ -162,8 +162,8 @@ function DocPage({ content, sections, title, description }) {
                 >
                   <CircularProgress color="divider" />
                 </Box>
-              )}
-              {renderedSections >= 2 && (
+              )} */}
+              {/* {renderedSections >= 2 && ( */}
                 <div style={{ width: blnMidScreen ? "97%" : "100%" }}>
                   {sections
                     .slice(4)
@@ -223,7 +223,7 @@ function DocPage({ content, sections, title, description }) {
                       )
                     )}
                 </div>
-              )}
+              {/* )} */}
             </Grid>
             {!blnSmallScreen && (
               <Grid

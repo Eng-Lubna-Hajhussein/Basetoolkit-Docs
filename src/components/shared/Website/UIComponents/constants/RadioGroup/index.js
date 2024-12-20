@@ -39,14 +39,14 @@ import { radioGroupProps, radioProps } from "../../Api/PropsApi/constants";
 
 export const radioGroupContent = [
   { label: "#Basic Group", href: "#basic-group" },
-  { label: "#Radio Sizes", href: "#radio-sizes" },
-  { label: "#Standalone Radio", href: "#standalone-radio" },
-  { label: "#Direction", href: "#direction" },
-  { label: "#Controlled Radios", href: "#controlled-radios" },
-  { label: "#Label Position", href: "#label-position" },
-  { label: "#Error State", href: "#error-state" },
+  { label: "#Inline Radio Group", href: "#inline-radio-group" },
+  { label: "#Controlled Radio Group", href: "#controlled-radio-group" },
+  { label: "#Standalone Radios", href: "#standalone-radios" },
+  { label: "#Sized Radio Options", href: "#sized-radio-options" },
+  { label: "#Colors", href: "#colors" },
+  { label: "#Label Positioning", href: "#label-positioning" },
+  { label: "#Quiz With Validation", href: "#quiz-with-validation" },
   { label: "#Custom Styles", href: "#custom-styles" },
-  { label: "#Radio Color", href: "#radio-color" },
   { label: "<Radio />", href: "#radio-api" },
   { label: "<RadioGroup />", href: "#radio-group-api" },
 ];
@@ -128,4 +128,3 @@ export const radioGroupSections = [
     componentProps: radioGroupProps,
   },
 ];
-

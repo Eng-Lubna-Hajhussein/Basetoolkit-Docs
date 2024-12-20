@@ -1,6 +1,13 @@
 export const source = `
 import * as React from "react";
-import { ProSelect, Checkbox, ListItemText, Chip, Box, Stack } from "@basetoolkit/ui";
+import {
+  ProSelect,
+  Checkbox,
+  ListItemText,
+  Chip,
+  Box,
+  Stack,
+} from "@basetoolkit/ui";
 
 const names = [
   "Oliver Hansen",
@@ -16,9 +23,11 @@ const names = [
 ];
 
 export default function MultiSelectWithCustomSeparators() {
-  const [selectedNames, setSelectedNames] = React.useState([ "Oliver Hansen",
+  const [selectedNames, setSelectedNames] = React.useState([
+    "Oliver Hansen",
     "Van Henry",
-    "April Tucker",]);
+    "April Tucker",
+  ]);
 
   const handleChange = (event, newValue) => {
     setSelectedNames(newValue);
@@ -38,10 +47,11 @@ export default function MultiSelectWithCustomSeparators() {
               {option}
               {index < selected.length - 1 && <span>&nbsp;,&nbsp;</span>}
             </React.Fragment>
-          ))}
+          ))
+        }
         fullWidth
       />
-       <ProSelect
+      <ProSelect
         multiple
         options={names}
         value={selectedNames}
@@ -53,10 +63,11 @@ export default function MultiSelectWithCustomSeparators() {
               {option}
               {index < selected.length - 1 && <span>&nbsp;-&nbsp;</span>}
             </React.Fragment>
-          ))}
+          ))
+        }
         fullWidth
       />
-       <ProSelect
+      <ProSelect
         multiple
         options={names}
         value={selectedNames}
@@ -68,10 +79,11 @@ export default function MultiSelectWithCustomSeparators() {
               {option}
               {index < selected.length - 1 && <span>&nbsp;/&nbsp;</span>}
             </React.Fragment>
-          ))}
+          ))
+        }
         fullWidth
       />
     </Stack>
   );
 }
-`
+`;

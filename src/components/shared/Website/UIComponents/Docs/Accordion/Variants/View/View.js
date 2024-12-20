@@ -8,10 +8,9 @@ import {
   SvgIcon,
   Box,
   Stack,
-  Typography,
 } from "@basetoolkit/ui";
 
-export default function AccordionUsage() {
+export default function AccordionVariants() {
   return (
     <Stack spacing={2} style={{ width: "100%" }}>
       <Box>

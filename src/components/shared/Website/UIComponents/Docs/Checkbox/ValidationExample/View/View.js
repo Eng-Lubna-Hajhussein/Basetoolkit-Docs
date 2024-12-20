@@ -25,7 +25,6 @@ const ValidationExample = () => {
     <FormControl>
       <FormLabel>Pick Two Options</FormLabel>
       <FormGroup>
-        
         <FormControlLabel
           label="Option 1"
           checked={state.option1}
@@ -45,7 +44,9 @@ const ValidationExample = () => {
           control={<Checkbox />}
         />
       </FormGroup>
-      {error && <FormHelperText error>Select exactly two options</FormHelperText>}
+      {error && (
+        <FormHelperText error>Select exactly two options</FormHelperText>
+      )}
     </FormControl>
   );
 };

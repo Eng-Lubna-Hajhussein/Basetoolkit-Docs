@@ -17,7 +17,7 @@ const InteractiveGauge = () => {
           height={200}
           value={value}
           pointer={showPointer}
-          hideText={true} 
+          hideText={true}
           arcWidth={arcWidth}
           startAngle={startAngle}
           endAngle={endAngle}
